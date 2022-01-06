@@ -1,12 +1,7 @@
 package chapter1;
 
-public class Q1_3 {
-	/*
-	 * the book says use char array so it could be in-place
-	 * but uhhh whatever BRO
-	 * if the interviewer said "but you gotta" then idk they'd just have to kick me out lol jk
-	 */
-	static String URLify (String string) {
+public class Q1_3_URLify {
+	static String solution (String string) {
 		int n = string.length();
 		if (n == 0) return string;
 			

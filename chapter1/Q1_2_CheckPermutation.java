@@ -3,12 +3,13 @@ package chapter1;
 import java.util.HashMap;
 import java.util.Arrays;
 
-/*
+/**
+ * good questions to ask cause its a string problem
  * - is the permutation case sensitive?
  * - is whitespace significant?
  */
-public class Q1_2 {
-	static boolean checkPermutation(String s1, String s2) {
+public class Q1_2_CheckPermutation {
+	static boolean solution(String s1, String s2) {
 		int n = s1.length();
 		int n2 = s2.length();
 		

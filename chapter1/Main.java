@@ -3,9 +3,10 @@ package chapter1;
 public class Main {
 
 	public static void main(String[] args) {
-//		System.out.println(Q1_1.isUnique(""));
-//		System.out.println(Q1_2.checkPermutation("", ""));
-		System.out.println(Q1_3.URLify("Mr John Smith    "));
+//		System.out.println(Q1_1_IsUnique.solution(""));
+//		System.out.println(Q1_2_CheckPermutation.solution("", ""));
+//		System.out.println(Q1_3_URLify.solution(""));
+//		System.out.println(Q1_4_PalindromePermutation.solution(""));
 	}
 
 }

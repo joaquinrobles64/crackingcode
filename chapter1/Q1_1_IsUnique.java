@@ -2,8 +2,8 @@ package chapter1;
 
 import java.util.HashMap;
 
-public class Q1_1 {
-	static boolean isUnique(String string) {
+public class Q1_1_IsUnique {
+	static boolean solution(String string) {
 		int n = string.length();
 		HashMap<Character, Boolean> hashmap = new HashMap<Character, Boolean>();
 		
