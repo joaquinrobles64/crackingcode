@@ -3,24 +3,32 @@ package chapter2;
 public class Main {
 
 	public static void main(String[] args) {
-		ListNode head = new ListNode(0);
+		ListNode head = new ListNode(-1);
 		ListNode curr = head;
 		
-		for (int i = 0; i < 4; i++) {
-			curr.val = i;
-			ListNode nex = new ListNode(-1);
-			curr.next = nex;
+		int[] values = new int[] {3,5,8,5,10,2,1};
+		
+		for (int i = 0; i<values.length; i++) {
+			ListNode next = new ListNode(values[i]);
+			curr.next = next;
 			curr = curr.next;
 		}
-		curr.val = 2;
 		
-		Q2_1.removeDups(head);
+		ListNode list = head.next;
 		
-		while(head != null) {
-			System.out.println(head.val);
-			head = head.next;
-			
-		}
+		printLinkedList(list);
+		
+//		Q2_1_RemoveDups.solution(head);
+		Q2_4_Partition.solution(list, 5);
+		
+		printLinkedList(list);
 	}
-
+	
+	static void printLinkedList(ListNode head) {
+		while(head != null) {
+			System.out.print(head.val + " ");
+			head = head.next;	
+		}
+		System.out.println();
+	}
 }

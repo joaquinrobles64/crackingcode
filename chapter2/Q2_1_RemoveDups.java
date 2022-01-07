@@ -2,8 +2,8 @@ package chapter2;
 
 import java.util.HashSet;
 
-public class Q2_1 {
-	static void removeDups(ListNode head) {
+public class Q2_1_RemoveDups {
+	static void solution(ListNode head) {
 		HashSet<Integer> hashset = new HashSet<Integer>();
 		ListNode prev = null;		
 		
