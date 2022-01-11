@@ -19,7 +19,7 @@ public class Main {
 		printLinkedList(list);
 		
 //		Q2_1_RemoveDups.solution(head);
-		Q2_4_Partition.solution(list, 5);
+//		Q2_4_Partition.solution(list, 5);
 		
 		printLinkedList(list);
 	}
