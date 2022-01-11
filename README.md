@@ -1,5 +1,5 @@
 ## Going through Gayle Laakmann McDowell's famous Cracking the Coding Interview book and doing problems following this guide: https://www.sdeskills.com/ctci
-
+### If you'd like to take a peek into my brain and how I think, here's a google sheets with my notes for each problem: shorturl.at/djqyO
 The software industry absolutely adores giving whiteboard problems above all else, so I have no choice but to adhere to and conquer this culture.
 
 - I time myself for 30 minutes to solve a question.
