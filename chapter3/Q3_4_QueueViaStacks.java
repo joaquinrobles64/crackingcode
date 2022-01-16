@@ -1,54 +1,57 @@
 package chapter3;
 
+import java.util.Stack;
+
 public class Q3_4_QueueViaStacks<T> {
-	private MyStack<T> stack1;
-	private MyStack<T> stack2;
-	private boolean stackmode = true;
-	
+	private Stack<T> stack1, stack2;
+	boolean inStack1 = true;
 	
 	public Q3_4_QueueViaStacks() {
-		stack1 = new MyStack<T>();
-		stack2 = new MyStack<T>();
+		stack1 = new Stack<T>();
+		stack2 = new Stack<T>();
 	}
 	
-	public void add(T value) {
-		if (!stackmode) exchangeStackValues();
-		stack1.push(value);
+	public void push(T x) {
+		if (!inStack1) {
+			exchangeStackValues();
+		}
+		stack1.push(x);
 	}
 	
-	public T remove() {
-		if (stackmode) {
+	public T pop() {
+		if (inStack1) {
 			exchangeStackValues();
 		}
 		return stack2.pop();
 	}
 	
 	public T peek() {
-		if (stackmode) {
+		if (inStack1) {
 			exchangeStackValues();
 		}
 		return stack2.peek();
 	}
 	
-	public boolean isEmpty() {
-		if (stack1.isEmpty() || stack2.isEmpty()) return true;
+	public boolean empty() {
+		if (stack1.isEmpty() && stack2.isEmpty()) {
+			return true;
+		}
 		return false;
 	}
 	
 	private void exchangeStackValues() {
-		if (stackmode) {
+		if (inStack1) {
 			while (!stack1.isEmpty()) {
 				T curr = stack1.pop();
 				stack2.push(curr);
 			}
-			stackmode = false;
-		} 
-		else {
+			inStack1 = false;
+		} else {
 			while (!stack2.isEmpty()) {
 				T curr = stack2.pop();
 				stack1.push(curr);
 			}
-			stackmode = true;
+			inStack1 = true;
 		}
 	}
 }
