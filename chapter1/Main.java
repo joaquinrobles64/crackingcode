@@ -9,6 +9,7 @@ public class Main {
 //		System.out.println(Q1_4_PalindromePermutation.solution(""));
 //		System.out.println(Q1_5_OneAway.solution("", ""));
 //		System.out.println(Q1_6_StringCompression.solution(""));
+//		System.out.println(Q1_9_StringRotationLeet.solution("", ""));
 	}
 
 }
