@@ -29,7 +29,6 @@ public class Q1_8_ZeroMatrix {
 			for (int col = 0; col < n; col++) {
 				if (matrix[row][col] == 0) {
 					tupleStack.push(new Tuple(row, col));
-					break;
 				}
 			}
 		}
