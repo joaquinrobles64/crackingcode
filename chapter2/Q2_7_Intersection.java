@@ -2,11 +2,8 @@ package chapter2;
 
 public class Q2_7_Intersection {
 	/* 
-	O(n*m) runtime where n and m are the lengths of the two lists. 
-	
-	The book's solution is pretty good at O(A + B) where A and B are the lengths
-	of the two lists. I don't think I would've come up with the approach 
-	for reaching this runtime in 30 mins. Maybe I should give myself more than 30 mins?
+	 * time complexity:  O(n*m) where n and m are the lengths of the two lists. 
+	 * space complexity: O(1)
 	 */
 	static ListNode solution(ListNode head1, ListNode head2) {
 		ListNode pointer1 = head1;
@@ -19,15 +16,14 @@ public class Q2_7_Intersection {
 		boolean isIntersecting = false;
 		if (pointer1 == pointer2) { isIntersecting = true; }
 		
-		
 		if (isIntersecting) {
 			pointer1 = head1;
 			pointer2 = head2;
 			
 			/*
-			Brute force nested loop to check 
-			If at any point in the two lists the current nodes are equal, 
-			then return either one of the two nodes
+			 * Brute force nested loop to check 
+			 * If at any point in the two lists the current nodes are equal, 
+			 * then return either one of the two nodes
 			 */
 			while (pointer1 != null) {
 				while (pointer2 != null) {
