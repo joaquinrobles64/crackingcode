@@ -5,9 +5,9 @@ import java.util.Arrays;
 public class Main {
 
 	public static void main(String[] args) {
-//		System.out.println(Q1_1_IsUnique.solution(""));
+//		System.out.println(Q1_1_IsUnique.solution("abcd"));
 		
-//		System.out.println(Q1_2_CheckPermutation.solution("", ""));
+		System.out.println(Q1_2_CheckPermutation.solution("abcdda", "badadc"));
 		
 //		System.out.println(Q1_3_URLify.solution(""));
 		

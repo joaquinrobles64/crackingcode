@@ -1,7 +1,6 @@
 package chapter1;
 
-import java.util.HashMap;
-import java.util.Arrays;
+import java.util.HashSet;
 
 /**
  * good questions to ask cause its a string problem
@@ -9,21 +8,27 @@ import java.util.Arrays;
  * - is whitespace significant?
  */
 public class Q1_2_CheckPermutation {
+	/*
+	 * time complexity: O(2n) => O(n)
+	 * space complexity: O(n)
+	 */
 	static boolean solution(String s1, String s2) {
 		int n = s1.length();
 		int n2 = s2.length();
 		
 		if (n != n2) return false; // different lengths means its not a permutation
 		
-		HashMap<Character, Boolean> hashmap = new HashMap<Character, Boolean>();
+		HashSet<Character> hashset = new HashSet<>();
+		// add s1 chars to hashset
 		for (int i = 0; i < n; i++) {
 			Character s1Char = s1.charAt(i);
-			hashmap.put(s1Char, true);
+			hashset.add(s1Char);
 		}
 		
+		// go through s2 and check if current char of s2 is not in the hashset 
 		for (int i = 0; i < n; i++) {
 			Character s2Char = s2.charAt(i);
-			if (!hashmap.containsKey(s2Char)) {
+			if (!hashset.contains(s2Char)) {
 				return false;
 			}
 		}
