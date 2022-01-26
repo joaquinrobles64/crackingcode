@@ -1,18 +1,18 @@
 package chapter1;
 
-import java.util.HashMap;
+import java.util.HashSet;
 
 public class Q1_1_IsUnique {
 	static boolean solution(String string) {
 		int n = string.length();
-		HashMap<Character, Boolean> hashmap = new HashMap<Character, Boolean>();
+		HashSet<Character> hashset = new HashSet<>();
 		
 		for (int i = 0; i < n; i++) {
 			Character currChar = string.charAt(i);
-			if (hashmap.containsKey(currChar)) {
+			if (hashset.contains(currChar)) {
 				return false;
 			} else {
-				hashmap.put(currChar, true);
+				hashset.add(currChar);
 			}
 		}
 		
