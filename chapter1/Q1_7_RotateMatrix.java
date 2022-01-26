@@ -1,10 +1,15 @@
 package chapter1;
 
 public class Q1_7_RotateMatrix {
+	/*
+	 * time complexity:  O(n^2)
+	 * space complexity: O(1)
+	 * explanation at bottom of file
+	 */
 	static void solution(int[][] matrix) {
 		int n = matrix.length;
 
-		// transpose matrix
+		// transpose matrix - switch element (i, j) with (j, i)
 		for (int i = 0; i < n; i++) {
 			for (int j = i; j < n; j++) {
 				int temp = matrix[i][j];
@@ -12,7 +17,7 @@ public class Q1_7_RotateMatrix {
 				matrix[j][i] = temp;
 			}
 		}
-
+		
 		// two-pointer reverse values each row
 		int left = 0, right = n - 1;
 		for (int i = 0; i < n; i++) {

@@ -1,7 +1,10 @@
 package chapter2;
 
 public class Q2_4_Partition {
-	
+	/*
+	 * time complexity:  O(n)
+	 * space complexity: O(1)
+	 */
 	static ListNode solution(ListNode head, int x) {
 		if (head == null || head.next == null) return head;
 		

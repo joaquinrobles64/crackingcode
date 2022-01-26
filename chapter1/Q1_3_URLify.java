@@ -1,34 +1,15 @@
 package chapter1;
 
 public class Q1_3_URLify {
+	/*
+	 * time complexity: O(2n) => O(n)
+	 * space complexity: O(n)? cause of substring?
+	 */
 	static String solution (String string) {
 		int n = string.length();
 		if (n == 0) return string;
-			
-		int startCharIndex, endCharIndex;
 		
-		startCharIndex = findStartIndex(string);
-		endCharIndex = findEndIndex(string);
-		
-		String urlified = string.substring(startCharIndex, endCharIndex+1);
-		
-		return urlified.replaceAll(" ", "%20");
-	}
-	
-	private static int findEndIndex (String st) {
-		int iter = st.length() - 1;
-		while (st.charAt(iter) == ' ') {
-			iter--;
-		}
-		return iter;
-	}
-	
-	private static int findStartIndex (String st) {
-		int iter = 0;
-		while (st.charAt(iter) == ' ') {
-			iter++;
-		}
-		return iter;
+		return string.trim().replaceAll(" ", "%20");
 	}
 }
 

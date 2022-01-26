@@ -8,21 +8,17 @@ package chapter1;
  */
 public class Q1_9_StringRotationLeet {
 	/* 
-	 * O(n^2) time | O(n) space, 
-	 * I think... cause i make the char array 
-	 * along with the string.valueof cause strings are silly slow in java
+	 * time complexity:  O(n^2)
+	 * space complexity: O(n)
 	 */
 	public static boolean solution(String s, String goal) {
 		int n = s.length();
 		char[] chars = s.toCharArray();
 		
+		// repeatedly do a left shift until either the string is back to normal or it matches
 		for (int i = 0; i < n; i++) {
-			if (String.valueOf(chars).equals(goal)) {
-				return true;
-			} 
-			else {
-				leftShift(chars);
-			}
+			if (String.valueOf(chars).equals(goal)) return true; 
+			else leftShift(chars);
 		}
 		return false;
 	}

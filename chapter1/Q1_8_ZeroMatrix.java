@@ -5,10 +5,10 @@ import java.util.Stack;
 public class Q1_8_ZeroMatrix {
 	/* 
 	 * time complexity: O(m*n) 
-	 * space complexity: O(k) where k is the number of 0's in the matrix put into the stack
-	 * 
+	 * space complexity: O(n)
 	 */
 	public static void solution(int[][] matrix) {
+		// tuple class is for sure not necessary i just wanted to be cute
 		class Tuple {
 			private int[] tuple = new int[2];
 			
@@ -26,6 +26,7 @@ public class Q1_8_ZeroMatrix {
 		int n = matrix[0].length;
 		Stack<Tuple> tupleStack = new Stack<>();
 		
+		// put coordinates for where there is a 0 in the stack
 		for (int row = 0; row < m; row++) {
 			for (int col = 0; col < n; col++) {
 				if (matrix[row][col] == 0) {
@@ -34,6 +35,7 @@ public class Q1_8_ZeroMatrix {
 			}
 		}
 		
+		// use coordinates in stack go through each row and col to turn elements to 0
 		while (!tupleStack.empty()) {
 			Tuple tuple = tupleStack.pop();
 			int rowToLoop = tuple.getTuple()[0];
