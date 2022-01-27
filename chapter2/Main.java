@@ -3,29 +3,26 @@ package chapter2;
 public class Main {
 
 	public static void main(String[] args) {
-		ListNode head = new ListNode(-1);
-		ListNode curr = head;
+		ListNode dummy1 = new ListNode(-1);
+		ListNode dummy2 = new ListNode(-1);
+		int[] values = new int[] {9,9,9,9};
+		int[] values2 = new int[] {9,9};
+		dummy1 = arrToLinkedList(values, dummy1);
+		dummy2 = arrToLinkedList(values2, dummy2);
 		
-		int[] values = new int[] {9,8,0,8,9};
+		printLinkedList(dummy1);
+//		System.out.println("+");
+//		printLinkedList(dummy2);
+//		System.out.println("----------");
+//		Q2_1_RemoveDups.solution(head);
 		
-		for (int i = 0; i<values.length; i++) {
-			ListNode next = new ListNode(values[i]);
-			curr.next = next;
-			curr = curr.next;
-		}
+//		Q2_4_Partition.solution(head, 5);
 		
-		// use this one
-		ListNode list = head.next;
+//		ListNode sumlist = Q2_5_SumLists.solution(dummy1, dummy2);
+//		printLinkedList(sumlist);
 		
-		printLinkedList(list);
+//		System.out.println(Q2_6_Palindrome.solution(head));
 		
-//		Q2_1_RemoveDups.solution(list);
-		
-//		Q2_4_Partition.solution(list, 5);
-		
-//		System.out.println(Q2_6_Palindrome.solution(list));
-		
-//		printLinkedList(list);
 	}
 	
 	static void printLinkedList(ListNode head) {
@@ -34,5 +31,15 @@ public class Main {
 			head = head.next;	
 		}
 		System.out.println();
+	}
+	
+	static ListNode arrToLinkedList(int[] values, ListNode head) {
+		ListNode curr = head;
+		for (int i = 0; i < values.length; i++) {
+			ListNode next = new ListNode(values[i]);
+			curr.next = next;
+			curr = curr.next;
+		}
+		return head = head.next;
 	}
 }
