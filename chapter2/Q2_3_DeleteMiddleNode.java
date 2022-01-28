@@ -5,10 +5,11 @@ public class Q2_3_DeleteMiddleNode {
 	 * time complexity:  O(n/2) => O(n)
 	 * space complexity: O(1)
 	 */
-	public static void solution(ListNode middle) {
-		ListNode next = middle.next;
-		middle.val = next.val;
-		middle.next = next.next;
+	public static void solution(ListNode node) {
+		if (node == null || node.next == null) return;
+		ListNode next = node.next;
+		node.val = next.val;
+		node.next = next.next;
 		
 		
 		
