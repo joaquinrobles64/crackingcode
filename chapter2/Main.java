@@ -20,7 +20,7 @@ public class Main {
 //		System.out.println(Q2_6_Palindrome.solution(dummy1));
 //		Q2_3_DeleteMiddleNode.solution(dummy1);
 //		printLinkedList(dummy1);
-		
+//		System.out.println(Q2_2ReturnKthToLast.solution(dummy1, 2));
 	}
 	
 	static void printLinkedList(ListNode head) {
