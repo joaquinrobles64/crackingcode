@@ -12,15 +12,25 @@ public class Main {
 		
 		printLinkedList(dummy1);
 		
-		
 //		Q2_1_RemoveDups.solution(dummy1);
-//		Q2_4_Partition.solution(dummy1, 5);
-//		ListNode sumlist = Q2_5_SumLists.solution(dummy1, dummy2);
-//		printLinkedList(sumlist);
-//		System.out.println(Q2_6_Palindrome.solution(dummy1));
+
+//		System.out.println(Q2_2ReturnKthToLast.solution(dummy1, 2));
+
 //		Q2_3_DeleteMiddleNode.solution(dummy1);
 //		printLinkedList(dummy1);
-//		System.out.println(Q2_2ReturnKthToLast.solution(dummy1, 2));
+
+//		Q2_4_Partition.solution(dummy1, 5);
+
+//		ListNode sumlist = Q2_5_SumLists.solution(dummy1, dummy2);
+//		printLinkedList(sumlist);
+
+//		System.out.println(Q2_6_Palindrome.solution(dummy1));
+
+//		ListNode one = new ListNode(1), two = new ListNode(2), three = new ListNode(3);
+//		one.next = two;
+//		two.next = three;
+//		three.next = two;
+//		System.out.println(Q2_8_LoopDetection.solution(one).val);
 	}
 	
 	static void printLinkedList(ListNode head) {
